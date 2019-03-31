@@ -11,7 +11,7 @@ mysql_database_host = 'MYSQL_DATABASE_HOST' in os.environ and os.environ['MYSQL_
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'db_user'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'Passw0rd'
-app.config['MYSQL_DATABASE_DB'] = 'employee_db'
+app.config['MYSQL_DATABASE_DB'] = 'player_db'
 app.config['MYSQL_DATABASE_HOST'] = mysql_database_host
 mysql.init_app(app)
 
@@ -23,7 +23,7 @@ cursor = conn.cursor()
 def main():
     return "Welcome!"
 
-@app.route('/how are you')
+@app.route('/how are you arun')
 def hello():
     return 'I am good, how about you?'
 
