@@ -1,4 +1,4 @@
-# Simple Web Application
+#  PWeb Application
 
 This is a simple web application using [Python Flask](http://flask.pocoo.org/) and [MySQL](https://www.mysql.com/) database. 
 This is used in the demonstration of development of Ansible Playbooks.
@@ -32,15 +32,16 @@ This is used in the demonstration of development of Ansible Playbooks.
   - Create database and database users
         
         # mysql -u <username> -p
+        mysql -u arun -p
         
-        mysql> CREATE DATABASE employee_db;
+        mysql> CREATE DATABASE player_db;
         mysql> GRANT ALL ON *.* to db_user@'%' IDENTIFIED BY 'Passw0rd';
-        mysql> USE employee_db;
-        mysql> CREATE TABLE employees (name VARCHAR(20));
+        mysql> USE player_db;
+        mysql> CREATE TABLE player (name VARCHAR(20));
         
   - Insert some test data
         
-        mysql> INSERT INTO employees VALUES ('JOHN');
+        mysql> INSERT INTO player VALUES ('messi');
     
 ## 4. Install and Configure Web Server
 
@@ -64,4 +65,4 @@ Open a browser and go to URL
 
     http://<IP>:5000                            => Welcome
     http://<IP>:5000/how%20are%20you            => I am good, how about you?
-    http://<IP>:5000/read%20from%20database     => JOHN
+    http://<IP>:5000/read%20from%20database     => messi
